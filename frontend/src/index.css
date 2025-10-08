@@ -1,0 +1,25 @@
+/* =====================================================
+FILE: frontend/src/index.css
+Updated: 2025-10-07  |  Tailwind + Glass base
+===================================================== */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Glass + background styling */
+body {
+  @apply min-h-screen flex items-center justify-center bg-gradient-to-br from-gray-900 via-indigo-900 to-black text-white;
+  background-attachment: fixed;
+}
+
+.glass {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.37);
+  border-radius: 16px;
+}
+/* =====================================================
+END OF FILE: frontend/src/index.css
+===================================================== */

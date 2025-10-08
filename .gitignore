@@ -1,0 +1,14 @@
+# -------------------------
+# FILE: .gitignore
+# -------------------------
+node_modules/
+dist/
+build/
+.env
+*.log
+*.aux
+*.out
+*.pdf
+*.synctex.gz
+.tmp/
+.DS_Store
