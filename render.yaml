@@ -8,9 +8,9 @@ services:
     autoDeploy: true
 
   # Frontend: Static Site
-  - type: web # Corrected type
+  - type: web
     name: texforge-frontend
-    runtime: static # Specify the runtime as static
+    runtime: static
     rootDir: frontend
     buildCommand: "npm install && npm run build"
     staticPublishPath: "dist"
@@ -21,7 +21,5 @@ services:
         destination: /index.html
     envVars:
       - key: VITE_API_URL
-        fromService:
-          type: web
-          name: texforge-backend
-          property: url
+        # Correctly construct the URL from the 'host' property
+        value: https://${texforge-backend.host}
