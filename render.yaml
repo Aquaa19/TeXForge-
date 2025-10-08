@@ -8,8 +8,9 @@ services:
     autoDeploy: true
 
   # Frontend: Static Site
-  - type: static
+  - type: web # Corrected type
     name: texforge-frontend
+    runtime: static # Specify the runtime as static
     rootDir: frontend
     buildCommand: "npm install && npm run build"
     staticPublishPath: "dist"
