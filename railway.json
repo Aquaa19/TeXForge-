@@ -1,0 +1,11 @@
+{
+  "$schema": "https://railway.app/railway.schema.json",
+  "services": [
+    {
+      "name": "texforge-backend",
+      "dockerfilePath": "./backend/Dockerfile",
+      "healthcheckPath": "/health"
+    }
+  ]
+}
+/* Comment */
