@@ -4,6 +4,7 @@
 // - Uses axios to POST LaTeX and returns either PDF Blob or error+log
 // =====================================================
 import axios from 'axios'
+const API_BASE_URL = import.meta.env.VITE_API_URL || '';
 
 export interface GeneratePdfSuccess {
   success: true
@@ -22,7 +23,7 @@ export type GeneratePdfResult = GeneratePdfSuccess | GeneratePdfFailure
 
 export async function generatePdf(latex: string): Promise<GeneratePdfResult> {
   try {
-    const resp = await axios.post('/api/generate', { latex }, { responseType: 'arraybuffer' })
+    const resp = await axios.post('${API_BASE_URL}/api/generate', { latex }, { responseType: 'arraybuffer' })
 
     const contentType = (resp.headers['content-type'] || '').toLowerCase()
     if (contentType.includes('application/pdf')) {
