@@ -4,9 +4,9 @@
   "version": "1.0.0",
   "type": "module",
   "scripts": {
-    "start": "node --loader ts-node/esm src/server.ts",
-    "dev": "nodemon --exec \"node --loader ts-node/esm\" src/server.ts",
-    "build": "tsc"
+    "build": "tsc",
+    "start": "node dist/server.js",
+    "dev": "nodemon --exec \"node --loader ts-node/esm\" src/server.ts"
   },
   "dependencies": {
     "cors": "^2.8.5",
